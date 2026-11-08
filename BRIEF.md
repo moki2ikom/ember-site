@@ -1,0 +1,2 @@
+# Ember & Oak: small-batch coffee roastery
+A one-page site that makes people want to subscribe. Sections: a hero with the roastery's story in one line; the three current roasts with tasting notes; a "find your roast" quiz (3 questions that suggest a roast); subscription plans (monthly, fortnightly, weekly) with prices; where the beans come from; a footer with the address in Bengaluru. Warm, crafted, slightly editorial; not a template look.

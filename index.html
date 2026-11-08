@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ember &amp; Oak is a small-batch coffee roastery in Bengaluru, roasting three coffees twice a week.">
+  <meta name="theme-color" content="#F7F1E6">
+  <title>Ember &amp; Oak — Small-batch coffee roastery, Bengaluru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&amp;family=Karla:wght@400..600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="#top">Ember &amp; Oak</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#roasts">Roasts</a></li>
+          <li><a href="#quiz">Find your roast</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#origins">Origins</a></li>
+        </ul>
+      </nav>
+      <a class="button button--small" href="#plans">Subscribe</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Small-batch roastery · Bengaluru</p>
+          <h1 id="hero-title">Coffee with the patience of the old city.</h1>
+          <p class="lede">Placeholder for the roastery story: one line about five-kilo batches, twice-weekly roasting and the garage off Church Street.</p>
+          <div class="actions">
+            <a class="button" href="#roasts">Meet the roasts</a>
+            <a class="button button--ghost" href="#quiz">Find your roast</a>
+          </div>
+        </div>
+        <p class="stamp" aria-hidden="true">
+          <span>Roasted</span>
+          <span>this week</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="roasts" aria-labelledby="roasts-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">01 — The roasts</p>
+          <h2 id="roasts-title">Three coffees, roasted this week.</h2>
+          <p class="section__intro">Placeholder intro about the current small-batch lineup and how the three roasts differ.</p>
+        </header>
+
+        <ol class="roast-grid" role="list">
+          <li>
+            <article class="roast-card">
+              <p class="roast-card__index">01</p>
+              <h3>Ember</h3>
+              <p class="roast-card__meta">Dark roast · Origin placeholder</p>
+              <p class="roast-card__notes">Placeholder tasting notes: dark chocolate, molasses and something warm.</p>
+              <a href="#quiz">Find a roast like this</a>
+            </article>
+          </li>
+          <li>
+            <article class="roast-card">
+              <p class="roast-card__index">02</p>
+              <h3>Oak</h3>
+              <p class="roast-card__meta">Medium roast · Origin placeholder</p>
+              <p class="roast-card__notes">Placeholder tasting notes: caramel, hazelnut and a little citrus peel.</p>
+              <a href="#quiz">Find a roast like this</a>
+            </article>
+          </li>
+          <li>
+            <article class="roast-card">
+              <p class="roast-card__index">03</p>
+              <h3>Bloom</h3>
+              <p class="roast-card__meta">Light roast · Origin placeholder</p>
+              <p class="roast-card__notes">Placeholder tasting notes: jasmine, apricot and honey.</p>
+              <a href="#quiz">Find a roast like this</a>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--oak" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">02 — Find your roast</p>
+          <h2 id="quiz-title">Three questions. One bag that fits.</h2>
+          <p class="section__intro">Placeholder intro explaining that the quiz takes under a minute and suggests one of the three roasts.</p>
+        </header>
+
+        <div class="quiz__body">
+          <form class="quiz__form" id="roast-quiz">
+            <div class="quiz__progress">
+              <p>Question 1 of 3</p>
+              <progress class="quiz__bar" value="1" max="3" aria-label="Quiz progress">1 of 3</progress>
+            </div>
+
+            <fieldset class="quiz__question">
+              <legend>How do you brew?</legend>
+              <div class="quiz__options">
+                <label class="quiz__option">
+                  <input type="radio" name="brew" value="bloom">
+                  <span>Pour-over or filter</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="brew" value="ember">
+                  <span>Espresso or moka pot</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="brew" value="oak">
+                  <span>French press or cold brew</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz__question">
+              <legend>What do you want in the cup?</legend>
+              <div class="quiz__options">
+                <label class="quiz__option">
+                  <input type="radio" name="flavour" value="ember">
+                  <span>Dark chocolate and molasses</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="flavour" value="oak">
+                  <span>Caramel, hazelnut and orange peel</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="flavour" value="bloom">
+                  <span>Jasmine, apricot and honey</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz__question">
+              <legend>How do you take it?</legend>
+              <div class="quiz__options">
+                <label class="quiz__option">
+                  <input type="radio" name="serve" value="ember">
+                  <span>With milk</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="serve" value="bloom">
+                  <span>Black, no sugar</span>
+                </label>
+                <label class="quiz__option">
+                  <input type="radio" name="serve" value="oak">
+                  <span>Depends on the day</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="quiz__actions">
+              <button class="button" type="button">See my roast</button>
+            </div>
+
+            <p class="quiz__note" id="quiz-note" role="status" aria-live="polite">Quiz results will appear here.</p>
+
+            <noscript>
+              <p class="quiz__note">This quiz needs JavaScript. You can still read about all three roasts above.</p>
+            </noscript>
+          </form>
+
+          <div class="quiz__result" id="quiz-result" aria-live="polite" hidden>
+            <h3>Result placeholder</h3>
+            <p>Placeholder result copy explaining which roast fits and why.</p>
+            <div class="actions">
+              <a class="button" href="#plans">Choose a plan</a>
+              <a class="button button--ghost" href="#roasts">See all roasts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plans" aria-labelledby="plans-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">03 — Plans</p>
+          <h2 id="plans-title">Fresh coffee, on your rhythm.</h2>
+          <p class="section__intro">Placeholder intro about flexible subscriptions, free Bengaluru delivery and pausing anytime.</p>
+        </header>
+
+        <ul class="plan-grid" role="list">
+          <li>
+            <article class="plan">
+              <h3>Monthly</h3>
+              <p class="plan__price">₹1,250<span> / delivery</span></p>
+              <p class="plan__cadence">One 250 g bag every four weeks.</p>
+              <ul class="plan__includes">
+                <li>Free delivery in Bengaluru</li>
+                <li>Pause, skip or cancel anytime</li>
+                <li>Price includes GST</li>
+              </ul>
+              <a class="button button--ghost" href="mailto:hello@emberandoak.in?subject=Monthly%20subscription">Choose monthly</a>
+            </article>
+          </li>
+          <li>
+            <article class="plan plan--featured">
+              <p class="plan__flag">Most popular</p>
+              <h3>Fortnightly</h3>
+              <p class="plan__price">₹1,180<span> / delivery</span></p>
+              <p class="plan__cadence">One 250 g bag every two weeks.</p>
+              <ul class="plan__includes">
+                <li>Free delivery in Bengaluru</li>
+                <li>Pause, skip or cancel anytime</li>
+                <li>Price includes GST</li>
+              </ul>
+              <a class="button" href="mailto:hello@emberandoak.in?subject=Fortnightly%20subscription">Choose fortnightly</a>
+            </article>
+          </li>
+          <li>
+            <article class="plan">
+              <h3>Weekly</h3>
+              <p class="plan__price">₹1,090<span> / delivery</span></p>
+              <p class="plan__cadence">One 250 g bag every week.</p>
+              <ul class="plan__includes">
+                <li>Free delivery in Bengaluru</li>
+                <li>Pause, skip or cancel anytime</li>
+                <li>Price includes GST</li>
+              </ul>
+              <a class="button button--ghost" href="mailto:hello@emberandoak.in?subject=Weekly%20subscription">Choose weekly</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--origins" id="origins" aria-labelledby="origins-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">04 — Origins</p>
+          <h2 id="origins-title">Where the beans come from.</h2>
+          <p class="section__intro">Placeholder intro about the growers, the altitude and why these three places shape the coffee.</p>
+        </header>
+
+        <div class="origins__layout">
+          <div class="origins__map" role="img" aria-label="Placeholder map of South India marking the three coffee origins.">
+            <span aria-hidden="true">Map placeholder</span>
+          </div>
+
+          <ol class="origin-list" role="list">
+            <li>
+              <article class="origin">
+                <h3>Chikmagalur</h3>
+                <dl>
+                  <div><dt>Producer</dt><dd>Placeholder producer</dd></div>
+                  <div><dt>Altitude</dt><dd>1,150 m</dd></div>
+                  <div><dt>Varietal</dt><dd>Placeholder varietal</dd></div>
+                </dl>
+              </article>
+            </li>
+            <li>
+              <article class="origin">
+                <h3>Coorg</h3>
+                <dl>
+                  <div><dt>Producer</dt><dd>Placeholder producer</dd></div>
+                  <div><dt>Altitude</dt><dd>1,050 m</dd></div>
+                  <div><dt>Varietal</dt><dd>Placeholder varietal</dd></div>
+                </dl>
+              </article>
+            </li>
+            <li>
+              <article class="origin">
+                <h3>Araku Valley</h3>
+                <dl>
+                  <div><dt>Producer</dt><dd>Placeholder producer</dd></div>
+                  <div><dt>Altitude</dt><dd>1,350 m</dd></div>
+                  <div><dt>Varietal</dt><dd>Placeholder varietal</dd></div>
+                </dl>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="wordmark wordmark--light" href="#top">Ember &amp; Oak</a>
+          <p>Placeholder line about the roastery and its small-batch approach.</p>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <address>
+            14 Church Street<br>
+            Bengaluru 560001<br>
+            Karnataka, India
+          </address>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <p>Saturday–Tuesday<br>8am–4pm</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@emberandoak.in">hello@emberandoak.in</a></li>
+            <li><a href="#top">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__small">© 2026 Ember &amp; Oak. Placeholder small print.</p>
+    </div>
+  </footer>
+</body>
+</html>
