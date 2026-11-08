@@ -135,6 +135,19 @@ svg {
   display: none !important;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;
@@ -503,43 +516,169 @@ svg {
 .roast-card {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: clamp(1.35rem, 4vw, 1.65rem);
   border: 1px solid var(--clay);
   border-radius: var(--radius);
   background: var(--paper);
 }
 
+.roast-card__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--clay);
+}
+
 .roast-card__index {
   color: var(--ember);
   font-family: var(--font-display);
-  font-size: var(--step-4);
+  font-size: var(--step-2);
   line-height: 1;
 }
 
-.roast-card h3 {
-  margin-top: 0.4rem;
-}
-
-.roast-card__meta {
+.roast-card__level {
   color: var(--clay);
   font-size: var(--step--1);
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   line-height: 1.4;
   text-transform: uppercase;
 }
 
-.roast-card__notes {
-  margin-block: 0.9rem 1.4rem;
+.roast-card h3 {
+  margin-top: 1.15rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem);
 }
 
-.roast-card a {
+.roast-card__origin {
+  margin-top: 0.35rem;
+  color: var(--clay);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.roast-card__notes {
+  margin-top: 1.5rem;
+}
+
+.roast-card__label {
+  color: var(--clay);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.roast-card__note-list {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-style: italic;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.roast-card__note-list li {
+  display: inline;
+  white-space: nowrap;
+}
+
+.roast-card__note-list li + li::before {
+  margin-inline: 0.28em;
+  color: var(--clay);
+  content: "·";
+  font-style: normal;
+}
+
+.roast-card__best {
+  margin-block: 1.4rem 1.25rem;
+  font-size: var(--step-0);
+  line-height: 1.5;
+}
+
+.roast-card__best span {
+  display: block;
+  margin-bottom: 0.1rem;
+  color: var(--clay);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.flavour-scale {
   margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--clay);
+}
+
+.flavour-scale__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--clay);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flavour-scale__caption span {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.flavour-scale__ticks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+}
+
+.flavour-scale__ticks span {
+  height: 0.35rem;
+  background: rgba(107, 91, 71, 0.22);
+}
+
+.flavour-scale--bright .flavour-scale__ticks span:nth-child(1),
+.flavour-scale--balanced .flavour-scale__ticks span:nth-child(-n + 3),
+.flavour-scale--deep .flavour-scale__ticks span:nth-child(-n + 5) {
+  background: var(--ember);
+}
+
+.roast-card__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin-top: 1.15rem;
+  color: var(--ember);
   font-size: var(--step--1);
   font-weight: 600;
   letter-spacing: 0.08em;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+.roast-card__link span {
+  transition: transform 150ms ease;
+}
+
+.roast-card__link:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.roast-card__link:hover span {
+  transform: translateX(3px);
 }
 
 .quiz__body {
@@ -888,8 +1027,12 @@ svg {
     gap: 1.25rem;
   }
 
+  .roast-grid {
+    padding-bottom: 2rem;
+  }
+
   .roast-grid > li:nth-child(2) {
-    margin-top: 2rem;
+    transform: translateY(2rem);
   }
 
   .section--oak .wrap {
