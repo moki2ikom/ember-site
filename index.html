@@ -177,17 +177,17 @@
         <header class="section__head">
           <p class="section__label">02 — Find your roast</p>
           <h2 id="quiz-title">Three questions. One bag that fits.</h2>
-          <p class="section__intro">Placeholder intro explaining that the quiz takes under a minute and suggests one of the three roasts.</p>
+          <p class="section__intro">Three quick questions about how you brew and what you like. We will point you to one of the three roasts.</p>
         </header>
 
         <div class="quiz__body">
           <form class="quiz__form" id="roast-quiz">
             <div class="quiz__progress">
-              <p>Question 1 of 3</p>
+              <p id="quiz-progress-label">Question 1 of 3</p>
               <progress class="quiz__bar" value="1" max="3" aria-label="Quiz progress">1 of 3</progress>
             </div>
 
-            <fieldset class="quiz__question">
+            <fieldset class="quiz__question" data-question="0">
               <legend>How do you brew?</legend>
               <div class="quiz__options">
                 <label class="quiz__option">
@@ -205,7 +205,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="quiz__question">
+            <fieldset class="quiz__question" data-question="1">
               <legend>What do you want in the cup?</legend>
               <div class="quiz__options">
                 <label class="quiz__option">
@@ -223,7 +223,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="quiz__question">
+            <fieldset class="quiz__question" data-question="2">
               <legend>How do you take it?</legend>
               <div class="quiz__options">
                 <label class="quiz__option">
@@ -242,10 +242,12 @@
             </fieldset>
 
             <div class="quiz__actions">
-              <button class="button" type="button">See my roast</button>
+              <button class="button button--ghost" type="button" data-quiz-back hidden>Back</button>
+              <button class="button" type="button" data-quiz-next>Next question</button>
             </div>
 
-            <p class="quiz__note" id="quiz-note" role="status" aria-live="polite">Quiz results will appear here.</p>
+            <p class="quiz__note" id="quiz-status" role="status" aria-live="polite"></p>
+            <p class="quiz__error" id="quiz-error" role="alert" hidden></p>
 
             <noscript>
               <p class="quiz__note">This quiz needs JavaScript. You can still read about all three roasts above.</p>
@@ -253,11 +255,15 @@
           </form>
 
           <div class="quiz__result" id="quiz-result" aria-live="polite" hidden>
-            <h3>Result placeholder</h3>
-            <p>Placeholder result copy explaining which roast fits and why.</p>
+            <p class="quiz__result-label">Your roast</p>
+            <h3 id="quiz-result-title" tabindex="-1"></h3>
+            <p class="quiz__result-meta" id="quiz-result-meta"></p>
+            <p class="quiz__result-notes" id="quiz-result-notes"></p>
+            <p class="quiz__result-why" id="quiz-result-why"></p>
             <div class="actions">
               <a class="button" href="#plans">Choose a plan</a>
               <a class="button button--ghost" href="#roasts">See all roasts</a>
+              <button class="button button--ghost" type="button" data-quiz-restart>Start over</button>
             </div>
           </div>
         </div>
